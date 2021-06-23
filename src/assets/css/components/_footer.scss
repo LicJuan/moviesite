@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 2rem;
+  background-color: transparent;
+  color: $white;
+  //   font-weight: bold;
+  font-family: $fontTitle;
+  font-size: 0.8rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 2rem;
+}

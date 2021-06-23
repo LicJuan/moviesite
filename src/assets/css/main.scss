@@ -1,0 +1,15 @@
+@import './mixins/responsive';
+@import './base/fonts';
+@import './base/spacers';
+@import './base/colors';
+@import './base/general';
+
+@import './components/loader';
+@import './components/header';
+@import './components/slider';
+@import './components/buttons';
+@import './components/section';
+@import './components/card';
+@import './components/detail';
+@import './components/footer';
+@import './components/pagination';

@@ -1,0 +1,110 @@
+.header {
+  display: flex;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  border-bottom: 0.1rem solid $grey;
+  z-index: 60;
+  transition: 0.5s ease;
+  &.saturate {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(15px);
+  }
+  @include sm {
+    padding: 0 6.25rem;
+  }
+  &__brand {
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-li {
+      margin-left: 1rem;
+    }
+    &-a {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: $light;
+      transition: 0.6s ease;
+      &:hover,
+      &--active {
+        color: $white;
+      }
+    }
+    &-form {
+      margin-left: 2.5rem;
+      .form-group {
+        display: flex;
+        align-items: center;
+        position: relative;
+        .header__input {
+          padding: 0.5rem;
+          border: 0.1rem solid $grey;
+          background-color: transparent;
+          border-radius: 3.125rem;
+          width: 15rem;
+          color: $white;
+          transition: 0.6s ease;
+          &:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+        .header__input-icon {
+          font-size: 1.5rem;
+          color: $light;
+          position: absolute;
+          right: 0.6rem;
+        }
+      }
+    }
+    @include md-max {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      background-color: $black;
+      transform: translateY(-100%);
+      transition: 0.5s ease;
+      &--active {
+        transform: translateY(0);
+      }
+      &-li {
+        margin-bottom: 2rem;
+        margin-left: 0;
+      }
+      &-a {
+        font-size: 2rem;
+        text-align: center;
+      }
+      &-form {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    z-index: 55;
+    .icon {
+      font-size: 2rem;
+      color: $white;
+      cursor: pointer;
+      &--close {
+        display: none;
+      }
+    }
+    @include md-max {
+      display: block;
+    }
+  }
+}

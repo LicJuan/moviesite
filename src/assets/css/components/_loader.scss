@@ -1,0 +1,11 @@
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/img/loader.gif') center no-repeat;
+  background-size: cover;
+  z-index: 100;
+  transition: 0.8s ease;
+}

@@ -1,0 +1,22 @@
+.paginate {
+  text-align: center;
+  margin-top: 3rem;
+  .rc-pagination {
+    &-item {
+      &-link {
+        color: $light !important;
+        background-color: transparent;
+        border-color: lighten($color: $secondary, $amount: 14);
+      }
+      background-color: lighten($color: $secondary, $amount: 10);
+      border-color: lighten($color: $secondary, $amount: 10);
+      &-active {
+        background-color: darken($color: $primary, $amount: 15);
+        background-color: darken($color: $primary, $amount: 15);
+      }
+      a {
+        color: $white;
+      }
+    }
+  }
+}

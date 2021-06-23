@@ -1,0 +1,167 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 150;
+  overflow: hidden;
+  display: none;
+  transition: 0.8s ease;
+  &.active {
+    display: block;
+  }
+  .btn {
+    padding: 0.3rem;
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    border: 2px solid $light;
+    border-radius: $borderRadius;
+    color: $light;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .trailer-box {
+    width: 90%;
+    height: 60%;
+    background-color: $white;
+    margin: 20rem auto 0 auto;
+    transform: translateY(-50%);
+    border-radius: $borderRadius;
+    @include md {
+      width: 60%;
+      height: 60%;
+    }
+    iframe {
+      border: 2px solid $light;
+      border-radius: $borderRadius;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.detail {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 6rem;
+  .btn--outline {
+    margin-left: calc(90% - 3.5rem);
+    margin-bottom: 2rem;
+    @include lg {
+      margin-left: 91%;
+    }
+  }
+  &__content-general {
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $light;
+    @include md {
+      align-items: flex-start;
+    }
+    &-img {
+      min-width: 200px;
+      max-width: 200px;
+      height: max-content;
+      @include md {
+        min-width: 200px;
+        max-width: 600px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: $borderRadius;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.8);
+        object-fit: contain;
+      }
+    }
+    &-block {
+      .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem;
+        .genre {
+          font-size: 1rem;
+          font-family: $fontTitle;
+          color: $light;
+          @include md {
+            font-size: 1.3rem;
+          }
+        }
+        .year {
+          font-size: 1.5rem;
+          font-weight: bold;
+          background: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.4)
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .rating {
+          color: $yellow;
+          font-size: 1rem;
+          @include md {
+            font-size: 1.2rem;
+          }
+        }
+        .rating--count {
+          font-size: 0.8rem;
+        }
+      }
+      .title {
+        font-family: $fontTitle;
+        font-size: 2rem;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 3rem;
+        @include md {
+          font-size: 3rem;
+        }
+        @include lg {
+          font-size: 3.4rem;
+          line-height: 4rem;
+        }
+      }
+      .tagline {
+        color: #d4d3d3;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+      }
+      .detail-p {
+        text-align: justify;
+        color: $light;
+      }
+      @include md {
+        margin-left: 2rem;
+      }
+    }
+    @include md {
+      flex-direction: row;
+      padding: 0 50px;
+    }
+    @include lg {
+      padding: 0 200px;
+    }
+  }
+  &__staff {
+    color: $white;
+    h2 {
+      font-family: $fontTitle;
+    }
+    &-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-rows: auto;
+      grid-auto-flow: row dense;
+      gap: 1rem;
+    }
+  }
+}

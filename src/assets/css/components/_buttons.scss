@@ -1,0 +1,39 @@
+.btn {
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50rem;
+  transition: 0.5s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &--sm {
+    padding: 0.2rem 1rem;
+    font-size: 0.9rem;
+  }
+  .icon {
+    font-size: 1rem;
+    // margin-top: 0.3rem;
+  }
+  &--primary {
+    background-color: $primary;
+    color: $white;
+    &:hover {
+      background-color: darken($color: $primary, $amount: 10);
+    }
+  }
+
+  &--outline {
+    background-color: rgba(81, 2, 130, 0.2);
+    border: 2px solid $light;
+    color: $white;
+    &:hover {
+      background-color: darken($color: $secondary, $amount: 10);
+    }
+  }
+}

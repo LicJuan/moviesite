@@ -1,0 +1,106 @@
+.slider {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  &__item {
+    opacity: 0;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1.5s ease;
+    &--active {
+      min-height: 100vh;
+      opacity: 1;
+      backdrop-filter: saturate(100%) blur(25px);
+    }
+    &-content {
+      position: absolute;
+      z-index: 30;
+      color: $light;
+      padding: 10rem 2.2rem;
+      text-align: center;
+      @include md {
+        padding: 10rem 6rem;
+      }
+      @include lg {
+        padding: 14rem 6rem;
+      }
+      &-title {
+        font-size: 2.5rem;
+        color: $white;
+        font-family: $fontTitle;
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        @include md {
+          font-size: 3rem;
+          line-height: 3.2rem;
+        }
+        @include lg {
+          font-size: 3.6rem;
+          line-height: 3.5rem;
+        }
+      }
+      &-overview {
+        margin-top: 3rem;
+        // text-align: justify;
+        font-size: 0.8rem;
+        @include md {
+          font-size: 1rem;
+        }
+      }
+      &-cta {
+        text-align: center;
+        margin-top: 1.5rem;
+        @include md {
+          margin-top: 2.5rem;
+        }
+        @include lg {
+          padding: 4rem;
+        }
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: 0.1rem solid $light;
+    border-radius: 50rem;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    text-align: center;
+    margin: 0;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 50;
+    @include md {
+      padding: 0.6rem;
+    }
+    &--prev {
+      left: 1%;
+    }
+    &--next {
+      right: 1%;
+    }
+  }
+
+  &__cant {
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    color: $white;
+    font-size: 2.5rem;
+    font-weight: 300;
+    @include md {
+      bottom: 5%;
+    }
+  }
+}

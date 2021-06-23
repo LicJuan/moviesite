@@ -1,0 +1,5 @@
+export const API_URL = 'https://api.themoviedb.org/3/movie'
+export const API_URL_SEARCH = 'https://api.themoviedb.org/3/search'
+export const API_KEY = '74a4173ca057fa32decbcc7f6c92ce73'
+export const API_LANG = 'es-ES'
+export const API_IMG_CALL = 'https://image.tmdb.org/t/p/original'
